@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,11 +47,14 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.17</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SaveLoad\PlayerData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
@@ -65,6 +68,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\UIElements.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\statsManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
@@ -72,15 +76,12 @@
     <Compile Include="Assets\Scripts\pauseGame.cs" />
     <Compile Include="Assets\Scripts\valueToValue.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
-    <Compile Include="Assets\DiscordRichPresence\Discord-RPC\PresenceManager.cs" />
     <Compile Include="Assets\Scripts\valueToText.cs" />
     <Compile Include="Assets\Scripts\SaveLoad\SaveSystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\translation\translateManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
-    <Compile Include="Assets\DiscordRichPresence\Discord-RPC\DiscordRpc.cs" />
-    <Compile Include="Assets\Scripts\DiscordPresenceManager.cs" />
     <Compile Include="Assets\Scripts\SaveSystem\subSaveSystem.cs" />
     <Compile Include="Assets\Scripts\toggleVisibility.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
@@ -98,14 +99,12 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Pixelation\Example\Scripts\Plane.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
-    <Compile Include="Assets\DiscordRichPresence\Discord-RPC\DiscordTime.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\translation\TranslatedTMP.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\IKControl.cs" />
     <Compile Include="Assets\Pixelation\Example\Scripts\ImageEffectBase.cs" />
-    <Compile Include="Assets\DiscordRichPresence\Demo\Exemple.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\currentSettings.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
@@ -125,13 +124,11 @@
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\SettingsSaveSet.cs" />
-    <Compile Include="Assets\UIElements.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Pixelation\Shaders\Chunky.shader" />
-    <None Include="Assets\DiscordRichPresence\Plugins\x86\discord-rpc.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
@@ -141,7 +138,6 @@
     <None Include="Assets\Fantasy Skybox FREE\ReleaseNotes.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Pixelation\Shaders\Pixelation.shader" />
-    <None Include="Assets\DiscordRichPresence\Plugins\x86_64\discord-rpc.dll" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -781,77 +777,77 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{B5E47BAE-3A23-AAF6-F069-B3EA9A9E037D}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001</Name>
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.Player.csproj">
+      <Project>{D48D7619-6620-20EA-4CAD-760980322F2C}</Project>
+      <Name>Unity.InternalAPIEngineBridge.001.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.PixelPerfect.csproj">
-      <Project>{449AA93B-074A-CA23-B309-38A4548017A5}</Project>
-      <Name>Unity.2D.PixelPerfect</Name>
+    <ProjectReference Include="Unity.2D.PixelPerfect.Player.csproj">
+      <Project>{1C9FB7B3-46C7-8C4F-0E83-C78176E4D2AD}</Project>
+      <Name>Unity.2D.PixelPerfect.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{1094D069-3A1E-F3AA-1C86-66B21F14FD59}</Project>
-      <Name>Unity.Timeline</Name>
+    <ProjectReference Include="Unity.Timeline.Player.csproj">
+      <Project>{68554BA8-96BE-9A9A-2EE5-109582E3393E}</Project>
+      <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{C3838BAC-77CE-BB3C-76FC-1EF676E00979}</Project>
-      <Name>Unity.TextMeshPro</Name>
+    <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
+      <Project>{E9466774-B834-8443-13A6-88051F46CA95}</Project>
+      <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{B612F42B-93C9-0659-B976-15D9F6091EAB}</Project>
-      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.Player.csproj">
+      <Project>{CD9256EE-10E5-812C-8BA6-E297BC065D36}</Project>
+      <Name>Unity.RenderPipelines.Core.ShaderLibrary.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{654E648C-5C34-A87A-68EB-1567985AA9A9}</Project>
-      <Name>UnityEngine.UI</Name>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{42C0862C-79F0-F24A-BA0F-B366A545344E}</Project>
+      <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{E4BAD402-4921-CEF2-40B8-BBDDEC5433BA}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.Player.csproj">
+      <Project>{02D4D789-E938-6800-F9B4-0C8AF3A37DDB}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Polybrush.csproj">
-      <Project>{6E961136-E7F3-48A8-4008-688E9ACC180E}</Project>
-      <Name>Unity.Polybrush</Name>
+    <ProjectReference Include="Unity.Polybrush.Player.csproj">
+      <Project>{881B0660-7D53-5049-3B79-757441779ECC}</Project>
+      <Name>Unity.Polybrush.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{F9164DA1-EC96-D2D6-0CEC-485F20461DC6}</Project>
-      <Name>Unity.Mathematics</Name>
+    <ProjectReference Include="Unity.Mathematics.Player.csproj">
+      <Project>{25D6D628-BAA4-70FF-1DB7-C4C5D549C72A}</Project>
+      <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{35C41DE0-21C2-B3DA-8B61-3ED121AC95BF}</Project>
-      <Name>Unity.2D.IK.Runtime</Name>
+    <ProjectReference Include="Unity.2D.IK.Runtime.Player.csproj">
+      <Project>{9377AA0A-C84C-EEED-C57A-A1D0FF5996F8}</Project>
+      <Name>Unity.2D.IK.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{7A347D21-6EBA-BB50-7038-A73C9FE9C219}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.Player.csproj">
+      <Project>{9B510A23-0F2C-0900-3380-13D029EACE78}</Project>
+      <Name>Unity.Postprocessing.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Triangle.Runtime.csproj">
-      <Project>{0812172D-BB6E-309F-0D33-98B5BBACD828}</Project>
-      <Name>Unity.2D.Animation.Triangle.Runtime</Name>
+    <ProjectReference Include="Unity.2D.Animation.Triangle.Runtime.Player.csproj">
+      <Project>{C99BF42B-C4F6-94A7-2567-EB28784668B8}</Project>
+      <Name>Unity.2D.Animation.Triangle.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
-      <Project>{7655A6F1-4B3A-3730-69C7-7CA2DF003E3A}</Project>
-      <Name>Unity.2D.Animation.Runtime</Name>
+    <ProjectReference Include="Unity.2D.Animation.Runtime.Player.csproj">
+      <Project>{A982830B-625C-97E4-F2E5-68ABC1515342}</Project>
+      <Name>Unity.2D.Animation.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{FE7C011B-278B-483A-6A12-DEB599858AE2}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player.csproj">
+      <Project>{E466BF35-CED2-9F88-6641-02E196284989}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RemoteConfig.Core.csproj">
-      <Project>{4EF404EF-FBF7-CC6E-0FF2-FA59C92293C6}</Project>
-      <Name>Unity.RemoteConfig.Core</Name>
+    <ProjectReference Include="Unity.RemoteConfig.Core.Player.csproj">
+      <Project>{435CCD5E-CD4F-7C28-5A89-616111257687}</Project>
+      <Name>Unity.RemoteConfig.Core.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{52C9E270-2CAC-C69A-1545-22854EBDA844}</Project>
-      <Name>Unity.2D.Common.Runtime</Name>
+    <ProjectReference Include="Unity.2D.Common.Runtime.Player.csproj">
+      <Project>{61ED21F2-48FA-ACD2-2360-7D42FBFB9F68}</Project>
+      <Name>Unity.2D.Common.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RemoteConfig.csproj">
-      <Project>{109E8646-1A1C-4316-A9EF-75C63CB6172B}</Project>
-      <Name>Unity.RemoteConfig</Name>
+    <ProjectReference Include="Unity.RemoteConfig.Player.csproj">
+      <Project>{D39D323B-CC6D-67D6-914A-13BD050120EB}</Project>
+      <Name>Unity.RemoteConfig.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.SpriteShape.Runtime.csproj">
-      <Project>{282ED4F2-A189-0310-B09E-26697844FC94}</Project>
-      <Name>Unity.2D.SpriteShape.Runtime</Name>
+    <ProjectReference Include="Unity.2D.SpriteShape.Runtime.Player.csproj">
+      <Project>{A08F93DB-7528-962A-253F-EA774E71C6EE}</Project>
+      <Name>Unity.2D.SpriteShape.Runtime.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

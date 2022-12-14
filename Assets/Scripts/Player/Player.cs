@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player instance;
+    [Header("From savefile")]
     public int health, maxHealth;
     public float level;
     public float MovementSpeed;
@@ -14,6 +15,11 @@ public class Player : MonoBehaviour
     public float savePercentage;
     public playerMovement movement;
     PlayerData data;
+    [Header("Values that don't come from saves")]
+    public float curPower = 0f;
+    public float maxPower = 4f;
+    public float powerRegenTime = 0.04f;
+    [Header("To asign")]
     public Transform cam;
 
     private void Awake()
@@ -54,6 +60,17 @@ public class Player : MonoBehaviour
     {
         curSaveInfo.instance.savePos = transform.position;
         curSaveInfo.instance.saveRot = transform.eulerAngles;
+
+        curPower = Mathf.Lerp(curPower, maxPower + 0.5f, powerRegenTime * Time.fixedDeltaTime);
+
+        curPower = Mathf.Clamp(curPower, 0f, 3f);
+
+        UpdateUI();
+    }
+
+    void UpdateUI()
+    {
         UIElements.instance.healthSlider.value = health;
+        UIElements.instance.KiPowerSlider.value = curPower;
     }
 }
