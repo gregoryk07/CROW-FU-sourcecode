@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -47,31 +47,34 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.11</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.17</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkin.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinBatch.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\UpdateBoundsJob.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\BufferManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\TransformAccessJob.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\NativeArrayHelper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\DeformSpriteSystem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\Components.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteLib\SpriteLibrary.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\NativeCustomSlice.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteLib\SpriteResolver.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\UpdateBoundsSystem.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinEntity.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteLib\SpriteLibraryAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\PrepareSkinningSystem.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\TransformAccessJob.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\NativeArrayHelper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\Components.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinBatch.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\UpdateBoundsJob.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteLib\SpriteLibrary.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\BufferManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\NativeCustomSlice.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinComposite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\DeformSpriteSystem.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteLib\SpriteResolver.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\UpdateBoundsSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\Unity.2D.Animation.Runtime.asmdef" />
@@ -625,21 +628,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{52C9E270-2CAC-C69A-1545-22854EBDA844}</Project>
-      <Name>Unity.2D.Common.Runtime</Name>
+    <ProjectReference Include="Unity.2D.Common.Runtime.Player.csproj">
+      <Project>{61ED21F2-48FA-ACD2-2360-7D42FBFB9F68}</Project>
+      <Name>Unity.2D.Common.Runtime.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{B5E47BAE-3A23-AAF6-F069-B3EA9A9E037D}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001</Name>
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.Player.csproj">
+      <Project>{D48D7619-6620-20EA-4CAD-760980322F2C}</Project>
+      <Name>Unity.InternalAPIEngineBridge.001.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{F9164DA1-EC96-D2D6-0CEC-485F20461DC6}</Project>
-      <Name>Unity.Mathematics</Name>
+    <ProjectReference Include="Unity.Mathematics.Player.csproj">
+      <Project>{25D6D628-BAA4-70FF-1DB7-C4C5D549C72A}</Project>
+      <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{654E648C-5C34-A87A-68EB-1567985AA9A9}</Project>
-      <Name>UnityEngine.UI</Name>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{42C0862C-79F0-F24A-BA0F-B366A545344E}</Project>
+      <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

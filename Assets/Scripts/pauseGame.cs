@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(LevelLoader))]
 public class pauseGame : MonoBehaviour
 {
     public bool doStopTime = true;
-    public GameObject pauseMenu, mainMenu;
+    public GameObject pauseMenu, mainMenu, gameUI;
     public GameObject[] otherUIPanels;
     public bool canPause = true;
     bool isPaused = false;
@@ -57,6 +56,7 @@ public class pauseGame : MonoBehaviour
             Time.timeScale = 0;
         }
         mainMenu.SetActive(true);
+        gameUI.SetActive(false);
         timeAtPause = Time.timeScale;
         
     }
@@ -70,6 +70,7 @@ public class pauseGame : MonoBehaviour
             Time.timeScale = 1;
         }
         mainMenu.SetActive(false);
+        gameUI.SetActive(true);
         if(otherUIPanels.Length != 0)
         {
             for (int i = 0; i < otherUIPanels.Length; i++)

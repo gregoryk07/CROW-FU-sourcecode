@@ -6,7 +6,8 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
     [Header("From savefile")]
-    public int health, maxHealth;
+    public int health;
+    public int maxHealth;
     public float level;
     public float MovementSpeed;
     public float JumpHeight;
