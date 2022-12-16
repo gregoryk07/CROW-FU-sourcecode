@@ -123,6 +123,8 @@
     <Compile Include="Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\Settings\SettingsSaveSet.cs" />
+    <Compile Include="Assets\AdvancementManager.cs" />
+    <Compile Include="Assets\Advancement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
