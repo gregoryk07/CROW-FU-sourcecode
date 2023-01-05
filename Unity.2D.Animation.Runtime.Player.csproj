@@ -57,11 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkin.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinBatch.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\UpdateBoundsJob.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\BufferManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\TransformAccessJob.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\NativeArrayHelper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinBatch.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\UpdateBoundsJob.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\DeformSpriteSystem.cs" />
@@ -74,6 +73,7 @@
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinEntity.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteLib\SpriteLibraryAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\PrepareSkinningSystem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\BufferManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@5.0.10\Runtime\SpriteSkinComposite.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -48,8 +48,8 @@ public class pauseGame : MonoBehaviour
     public void Pause()
     {
         isPaused = true;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        /*Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;*/
         timeAtPause = Time.timeScale;
         if (doStopTime)
         {
@@ -63,8 +63,8 @@ public class pauseGame : MonoBehaviour
     public void Resume()
     {
         isPaused = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        /*Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;*/
         if (doStopTime)
         {
             Time.timeScale = 1;

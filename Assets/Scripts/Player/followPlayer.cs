@@ -14,12 +14,13 @@ public class followPlayer : MonoBehaviour
     public bool allowParalaxa;
     public float paralaxaSpeed;
     Vector2 paralaxaPos;
+    public float paralaxaLimit = 0.005f;
     // Update is called once per frame
 
     private void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        /*Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;*/
     }
 
     void Update()
@@ -31,7 +32,7 @@ public class followPlayer : MonoBehaviour
     void setValues()
     {
         Vector2 _playerPos = player.position;
-        if (allowParalaxa)
+        /*if (allowParalaxa)
         {
             Vector2 _desiredParalaxa = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
             paralaxaPos = Vector2.Lerp(paralaxaPos, _desiredParalaxa, paralaxaSpeed * Time.deltaTime);
@@ -39,6 +40,12 @@ public class followPlayer : MonoBehaviour
         else
         {
             paralaxaPos = Vector2.zero;
+        }*/
+
+        if(allowParalaxa)
+        {
+            Vector2 _desiredParalaxa = new Vector2((Input.mousePosition.x - (Screen.width / 2)) * paralaxaLimit, (Input.mousePosition.y - (Screen.height / 2)) * paralaxaLimit);
+            paralaxaPos = Vector2.Lerp(paralaxaPos, _desiredParalaxa, paralaxaSpeed * Time.deltaTime);
         }
 
         camPos = _playerPos + paralaxaPos;

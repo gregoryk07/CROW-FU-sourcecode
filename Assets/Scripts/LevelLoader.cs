@@ -25,6 +25,7 @@ public class LevelLoader : MonoBehaviour
     }
     public void LoadLevel(int sceneIndex)
     {
+        Time.timeScale = 1;
         StartCoroutine(LoadAsychronously(sceneIndex));
     }
     IEnumerator LoadAsychronously(int sceneIndex)
@@ -38,7 +39,7 @@ public class LevelLoader : MonoBehaviour
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
 
             slider.value = progress;    
-            progresstext.text = progress * 100f + "%";
+            progresstext.text = (progress / 100f).ToString() + "%";
 
             yield return null;
         }

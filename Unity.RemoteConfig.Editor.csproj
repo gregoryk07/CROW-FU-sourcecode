@@ -58,15 +58,15 @@
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\RemoteConfigWindow.cs" />
     <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\RemoteConfigWindowController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\UIComponents\SegmentationRulesTreeview.cs" />
     <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\RemoteConfigEnvironmentWindowController.cs" />
     <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\RemoteConfigWebApiClient.cs" />
     <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\UIComponents\SettingsJsonModal.cs" />
     <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\RemoteConfigUtilities.cs" />
-    <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\RemoteConfigDataStore.cs" />
-    <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\UIComponents\SegmentationRulesTreeview.cs" />
     <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\UIComponents\MVRuleJsonModal.cs" />
     <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\UIComponents\SettingsTreeview.cs" />
     <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\UIComponents\MVRuleSettingsTreeview.cs" />
+    <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\RemoteConfigDataStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.remote-config@1.4.0\Editor\RemoteConfigEnvironmentWindow.cs" />
   </ItemGroup>
   <ItemGroup>

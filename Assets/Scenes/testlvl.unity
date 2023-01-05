@@ -9864,10 +9864,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camDistance: -14.64
   doFollowPlayer: 1
-  followSpeed: 2
+  followSpeed: 1
   player: {fileID: 336782412}
   allowParalaxa: 1
-  paralaxaSpeed: 0.5
+  paralaxaSpeed: 100
+  paralaxaLimit: 0.005
 --- !u!1 &2056801823
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class playerMovement : MonoBehaviour
     [Header("for debug")]
     public Vector2 moveVel;
     public Vector2 jumpVel;
-
+    bool x = false;
     float InputX;
     public KeyCode jumpKey = KeyCode.Space;
     // Update is called once per frame
@@ -99,5 +99,10 @@ public class playerMovement : MonoBehaviour
     {
         jumpVel = new Vector2(0f, jumpHeight);
         rb2D.AddForce(jumpVel);
+        if (!x)
+        {
+            AdvancementManager.instance.TriggerAdvancement(0);
+            x = true;
+        }
     }
 }
